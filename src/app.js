@@ -1,6 +1,7 @@
 const express = require('express');
 const stringsRouter = require('./routes/strings');
 const numbersRouter = require('./routes/numbers');
+const booleanRouter = require('./routes/booleans');
 // const { sayHello } = require('./lib/strings');
 // const { uppercase } = require('./lib/strings');
 // const { lowercase } = require('./lib/strings');
@@ -16,6 +17,7 @@ const app = express();
 app.use(express.json());
 app.use('/strings', stringsRouter);
 app.use('/numbers', numbersRouter);
+app.use('/booleans', booleanRouter);
 
 // const isNumeric = (string) => {
 //   return !Number.isNaN(parseInt(string));
