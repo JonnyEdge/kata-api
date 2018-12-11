@@ -2,6 +2,7 @@ const express = require('express');
 const stringsRouter = require('./routes/strings');
 const numbersRouter = require('./routes/numbers');
 const booleanRouter = require('./routes/booleans');
+const arrayRouter = require('./routes/arrays')
 // const { sayHello } = require('./lib/strings');
 // const { uppercase } = require('./lib/strings');
 // const { lowercase } = require('./lib/strings');
@@ -18,6 +19,7 @@ app.use(express.json());
 app.use('/strings', stringsRouter);
 app.use('/numbers', numbersRouter);
 app.use('/booleans', booleanRouter);
+app.use('/arrays', arrayRouter);
 
 // const isNumeric = (string) => {
 //   return !Number.isNaN(parseInt(string));
